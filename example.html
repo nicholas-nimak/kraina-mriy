@@ -4,9 +4,53 @@
     <meta charset="utf-8">
     <title>Example</title>
     <style media="screen">
+      a {
+        text-decoration: none;
+        color: #000;
+      }
+      /*a:hover {
+        text-decoration: underline;
+      }*/
+      a[href="#open-nav"] {
+        font-size: 1em;
+      }
+      a[href="#close-nav"] {
+        display: none;
+        font-size: 0.8em;
+      }
+      #top-nav {
+      }
+      #top-nav-links a {
+        display: none;
+      }
     </style>
+
+    <script src="https://code.jquery.com/jquery-3.2.1.js"></script>
+
   </head>
   <body>
-    <p>Hello world</p>
+    <nav role="navigation" id="top-nav">
+      <a href="example.html">logo</a>
+      <a href="#open-nav">&#8803;</a>
+      <a href="#close-nav">&#10005;</a>
+      <div id="top-nav-links">
+        <a href="#portfolio">Портфолио</a>
+        <a href="#services&amp;prices">Услуги и цены</a>
+        <a href="#styles">Стили</a>
+        <a href="#contacts">Контакты</a>
+      </div>
+    </nav>
+    <script type="text/javascript">
+      $("a[href='#open-nav']").click(function(){
+        this.style.display = 'none';
+        $("a[href='#close-nav']").css('display', 'inline');
+        $("#top-nav-links a").css('display', 'block');
+      })
+      $("a[href='#close-nav']").click(function(){
+        this.style.display = 'none';
+        $("a[href='#open-nav']").css('display', 'inline');
+        $("#top-nav-links a").css('display', 'none');
+      })
+    </script>
   </body>
 </html>
