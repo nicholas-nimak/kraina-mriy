@@ -1,3 +1,3 @@
 $(document).ready(function(){
-  $(".arrows").css("margin-top", $("#top-nav").css("height"))
+  $(".arrows").css("margin-top", $("header nav").css("height"))
 })

@@ -1,0 +1,50 @@
+div#contact-data {
+  background-color: #000;
+}
+div#contact-data #footer-logo {
+  max-width: 100%;
+  padding: 5rem;
+}
+@media screen and (max-width: 644px) {
+  div#contact-data {
+    text-align: center;
+  }
+  div#contact-data #footer-logo {
+    max-width: 90%;
+    padding: 0;
+    padding-top: 1rem;
+  }
+}
+#contact-data-container {
+  display: grid;
+  justify-content: space-around;
+  justify-items: center;
+  align-items: end;
+  grid-template-rows: 12.5rem;
+  grid-template-columns: repeat(3, 1fr);
+  color: #fff;
+  padding-bottom: 5rem;
+  text-align: left;
+}
+#phones-data {
+  font-size: 2.3125rem;
+}
+#emails-data, #offline-data {
+  font-size: 1.6875rem;
+}
+
+@media screen and (max-width: 1120px) {
+  #contact-data-container {
+    grid-template-columns: 80%;
+    grid-template-rows: auto;
+    justify-items: start;
+  }
+  /*#contact-data-container {
+    grid-template-rows: 12.5rem auto;
+    grid-template-columns: repeat(2, 1fr);
+  }
+  #offline-data {
+    grid-row: 2;
+    grid-column: 1/3;
+  }*/
+}

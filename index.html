@@ -2,35 +2,73 @@
 <html>
   <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Kraina mriy - Hello world</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.css" />
-    <link rel="stylesheet" href="css/main.css">
+    <!-- <link rel="stylesheet" href="example2.css"> -->
+    <link rel="stylesheet" href="example2-1-main.css">
+    <link rel="stylesheet" href="example2-1-top-nav.css">
+    <link rel="stylesheet" href="example2-1-slideshow.css">
+    <link rel="stylesheet" href="example2-1-accordion.css">
+    <link rel="stylesheet" href="example2-1-portfolio.css">
+    <link rel="stylesheet" href="example2-1-contacts.css">
 
     <script src="https://code.jquery.com/jquery-3.2.1.js"></script>
+
+    <style media="screen">
+      #map {
+        width: 400px;
+        height: 400px;
+      }
+    </style>
+
   </head>
   <body>
     <header>
-      <nav role="navigation" id="top-nav">
-        <a href="#">logo</a>
-        <a href="#portfolio">Портфолио</a>
-        <a href="#services&amp;prices">Услуги и цены</a>
-        <a href="#styles">Стили</a>
-        <a href="#contacts">Контакты</a>
+      <nav>
+        <a href="example.html" class="logo">
+          <img src="images/logo.png" alt="logo">
+        </a>
+        <a href="#toggler"><span id="open-nav">M</span><span id="close-nav">X</span></a>
+        <div class="links">
+          <a href="#portfolio">Портфолио</a>
+          <a href="#services-prices">Услуги и цены</a>
+          <a href="#styles">Стили</a>
+          <a href="#contacts">Контакты</a>
+        </div>
       </nav>
+      <!-- mobile navigation menu -->
+      <script type="text/javascript">
+
+        // javascript checking
+        // if(window.innerWidth <= 480) {
+        //   $(".links").css('display', 'none');
+        // }
+        $("span#open-nav").click(function(){
+          this.style.display = 'none';
+          $("span#close-nav").css('display', 'inline');
+          $(".links").css('display', 'grid');
+        })
+        $("span#close-nav").click(function(){
+          this.style.display = 'none';
+          $("span#open-nav").css('display', 'inline');
+          $(".links").css('display', 'none');
+        })
+      </script>
+
+
 
       <div id="slideshow-container">
         <div id="slideshow-images">
+          <img src="images/slideshow/slideshow-photo.png">
           <img src="images/slideshow/img_fjords_wide.jpg">
           <img src="images/slideshow/img_lights_wide.jpg">
           <img src="images/slideshow/img_mountains_wide.jpg">
           <img src="images/slideshow/img_nature_wide.jpg">
         </div>
-        <a class="arrows" id="slideshow-left-arrow">&#10094;</a>
-        <a class="arrows" id="slideshow-right-arrow">&#10095;</a>
-        <style media="screen">
-        </style>
+        <img class="arrows" id="slideshow-left-arrow" src="images/arrow-left.png"></img>
+        <img class="arrows" id="slideshow-right-arrow" src="images/arrow-right.png"></img>
         <div id="slideshow-dots">
-          <span class="dot" id="0"></span><span class="dot" id="1"></span><span class="dot" id="2"></span><span class="dot" id="3"></span>
+          <span class="dot" id="0"></span><span class="dot" id="1"></span><span class="dot" id="2"></span><span class="dot" id="3"></span><span class="dot" id="4"></span>
         </div>
       </div><!-- div#slideshow-container -->
       <script src="js/slideshow.js" charset="utf-8"></script>
@@ -42,37 +80,199 @@
 
     <section id="portfolio">
       <h2>Портфолио</h2>
+      <div class="line-div">
+
+      </div>
       <h3>Дизайн квартир</h3>
-      <h4>ЖК "Гоголь"</h4>
-      <h4>ЖК "Гоголь" часть 2</h4>
-      <h4>ЖК "Ривер стоун"</h4>
+      <div class="portfolio-items">
+        <div class="portfolio-item-container row1 col1">
+          <img src="images/portfolio/p1.png" alt="portfolio">
+        </div>
+        <h4 class="row2 col1">ЖК "Гоголь"</h4>
+        <div class="portfolio-item-container row1 col2">
+          <img src="images/portfolio/p2.png" alt="portfolio">
+        </div>
+        <h4 class="row2 col2">ЖК "Гоголь" часть 2</h4>
+        <div class="portfolio-item-container row1 col3">
+          <img src="images/portfolio/p3.png" alt="portfolio">
+        </div>
+        <h4 class="row2 col3">ЖК "Ривер стоун"</h4>
+        <img class="arrows" src="images/arrow-left.png"></img>
+        <img class="arrows" src="images/arrow-right.png"></img>
+
+      </div>
       <h3>Дизайн домов</h3>
-      <h4>ЖК "Гоголь"</h4>
-      <h4>ЖК "Гоголь" часть 2</h4>
-      <h4>ЖК "Ривер стоун"</h4>
+      <div class="portfolio-items">
+        <div class="portfolio-item-container row1 col1">
+          <img src="images/portfolio/p1.png" alt="portfolio">
+        </div>
+        <h4 class="row2 col1">ЖК "Гоголь"</h4>
+        <div class="portfolio-item-container row1 col2">
+          <img src="images/portfolio/p2.png" alt="portfolio">
+        </div>
+        <h4 class="row2 col2">ЖК "Гоголь" часть 2</h4>
+        <div class="portfolio-item-container row1 col3">
+          <img src="images/portfolio/p3.png" alt="portfolio">
+        </div>
+        <h4 class="row2 col3">ЖК "Ривер стоун"</h4>
+        <img class="arrows" src="images/arrow-left.png"></img>
+        <img class="arrows" src="images/arrow-right.png"></img>
+
+      </div>
       <h3>Дизайн офисов</h3>
-      <h4>ЖК "Гоголь"</h4>
-      <h4>ЖК "Гоголь" часть 2</h4>
-      <h4>ЖК "Ривер стоун"</h4>
+      <div class="portfolio-items">
+        <div class="portfolio-item-container row1 col1">
+          <img src="images/portfolio/p1.png" alt="portfolio">
+        </div>
+        <h4 class="row2 col1">ЖК "Гоголь"</h4>
+        <div class="portfolio-item-container row1 col2">
+          <img src="images/portfolio/p2.png" alt="portfolio">
+        </div>
+        <h4 class="row2 col2">ЖК "Гоголь" часть 2</h4>
+        <div class="portfolio-item-container row1 col3">
+          <img src="images/portfolio/p3.png" alt="portfolio">
+        </div>
+        <h4 class="row2 col3">ЖК "Ривер стоун"</h4>
+        <img class="arrows" src="images/arrow-left.png"></img>
+        <img class="arrows" src="images/arrow-right.png"></img>
+
+      </div>
     </section><!-- section#portfolio -->
+
+
+
     <section id="services&amp;prices">
-      <h2>Услуги и цены</h2>
-      <h3>Дизайн квартиры 450 грн.м2</h3>
-      <h3>Дизайн офиса 400 грн.м2</h3>
-      <h3>Дизайн дома 450 грн.м2</h3>
-      <h3>Дизайн общественного заведения 400 грн.м2</h3>
+      <h2 id="services-prices-h2">Услуги и цены</h2>
+      <div class="line-div">
+
+      </div>
+
+      <button class="accordion">Дизайн квартиры 450 грн.м2</button>
+      <div class="panel">
+        <h4>Вы можете заказать:</h4>
+        <h4>Дизайн-проект квартиры (дизайн, 3D визуализация) + минимальный пакет рабочих чертежей:</h4>
+        <ul>
+          <li>Обмерочный чертеж с привязкой инженерных коммуникаций</li>
+          <li>Планировочные решения (1-2 варианта)</li>
+          <li>Планы с расстановкой мебели (2-3 варианта)</li>
+          <li>План демонтажа перегородок. (Указываются все сносимые стены и перегородки)</li>
+          <li>План монтажа перегородок. (Указываются все вновь возводимые стены и перегородки)</li>
+          <li>План помещения после перепланировки с размерами</li>
+          <li>Экспликация помещений с расстановкой мебели</li>
+          <li>План пола с указанием: отметки уровня пола, типа напольного покрытия, рисунка и размеров</li>
+        </ul>
+      </div>
+
+      <button class="accordion">Дизайн офиса 400 грн.м2</button>
+      <div class="panel">
+        <h4>Вы можете заказать:</h4>
+        <h4>Дизайн-проект квартиры (дизайн, 3D визуализация) + минимальный пакет рабочих чертежей:</h4>
+        <ul>
+          <li>Обмерочный чертеж с привязкой инженерных коммуникаций</li>
+          <li>Планировочные решения (1-2 варианта)</li>
+          <li>Планы с расстановкой мебели (2-3 варианта)</li>
+          <li>План демонтажа перегородок. (Указываются все сносимые стены и перегородки)</li>
+          <li>План монтажа перегородок. (Указываются все вновь возводимые стены и перегородки)</li>
+          <li>План помещения после перепланировки с размерами</li>
+          <li>Экспликация помещений с расстановкой мебели</li>
+          <li>План пола с указанием: отметки уровня пола, типа напольного покрытия, рисунка и размеров</li>
+        </ul>
+      </div>
+
+      <button class="accordion">Дизайн дома 450 грн.м2</button>
+      <div class="panel">
+        <h4>Вы можете заказать:</h4>
+        <h4>Дизайн-проект квартиры (дизайн, 3D визуализация) + минимальный пакет рабочих чертежей:</h4>
+        <ul>
+          <li>Обмерочный чертеж с привязкой инженерных коммуникаций</li>
+          <li>Планировочные решения (1-2 варианта)</li>
+          <li>Планы с расстановкой мебели (2-3 варианта)</li>
+          <li>План демонтажа перегородок. (Указываются все сносимые стены и перегородки)</li>
+          <li>План монтажа перегородок. (Указываются все вновь возводимые стены и перегородки)</li>
+          <li>План помещения после перепланировки с размерами</li>
+          <li>Экспликация помещений с расстановкой мебели</li>
+          <li>План пола с указанием: отметки уровня пола, типа напольного покрытия, рисунка и размеров</li>
+        </ul>
+      </div>
+
+      <button class="accordion">Дизайн общественного заведения 400 грн.м2</button>
+      <div class="panel">
+        <h4>Вы можете заказать:</h4>
+        <h4>Дизайн-проект квартиры (дизайн, 3D визуализация) + минимальный пакет рабочих чертежей:</h4>
+        <ul>
+          <li>Обмерочный чертеж с привязкой инженерных коммуникаций</li>
+          <li>Планировочные решения (1-2 варианта)</li>
+          <li>Планы с расстановкой мебели (2-3 варианта)</li>
+          <li>План демонтажа перегородок. (Указываются все сносимые стены и перегородки)</li>
+          <li>План монтажа перегородок. (Указываются все вновь возводимые стены и перегородки)</li>
+          <li>План помещения после перепланировки с размерами</li>
+          <li>Экспликация помещений с расстановкой мебели</li>
+          <li>План пола с указанием: отметки уровня пола, типа напольного покрытия, рисунка и размеров</li>
+        </ul>
+      </div>
+
     </section>
+    <!-- section#services&amp;prices -->
+    <script src="js/accordion.js" charset="utf-8"></script>
+
+
     <section>
-      <a href="#">Наши партнеры</a>
-    </section>
-    <section id="contacts">
-      <h2>Контакты</h2>
-      лого
-      телефоны
-      почта
-      улица
+      <a id="partners-link" href="#partners">Наши партнеры</a>
+      <style media="screen">
+      #partners-link {
+          display: inline-block;
+          background-color: #000;
+          color: #fff;
+          cursor: pointer;
+          /*width: 100%;*/
+          border: none;
+          text-decoration: none;
+          transition: 0.4s;
+
+
+          padding: 0 2.8125rem;
+          margin: 7.625rem 0 0 2.8125rem;
+          line-height: 6rem;
+          font-size: 1.875rem;
+      }
+
+      /* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
+      #partners-link.active, #partners-link:hover {
+          background-color: rgba(51, 47, 43, 0.5);
+      }
+
+      </style>
     </section>
 
+
+    <section id="contacts">
+      <h2 style="text-transform:initial;">Контакты</h2>
+      <div class="line-div">
+
+      </div>
+      <div class="frame-container" style="font-size: 0;">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2541.463486537199!2d30.542338315358222!3d50.432466979472835!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40d4cf0972408a61%3A0x7d817c74d6a982d8!2sMoskovska+St%2C+46%2F2%2C+Kyiv!5e0!3m2!1sen!2sua!4v1500672104439" width="100%" height="400" frameborder="0" style="border:0" allowfullscreen></iframe>
+      </div>
+      <div id="contact-data">
+        <img id="footer-logo" src="images/logo.png" alt="logo">
+        <div id="contact-data-container">
+          <div id="phones-data">
+            <p>(044) 227-58-58</p>
+            <p>(067) 645-58-58</p>
+          </div>
+          <div id="emails-data">
+            <p>krm7@ukr.net</p>
+            <p>krm8@ukr.net — для коммерческих предложений</p>
+          </div>
+          <div id="offline-data">
+            <p>ул. Московская 46/2, Киев</p>
+            <p>Мы работаем с 9:30 до 18:30 суббота и воскресенье в телефонном режиме</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    </div>
 
   </body>
 </html>

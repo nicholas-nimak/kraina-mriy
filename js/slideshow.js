@@ -1,6 +1,6 @@
 
 let imageIndex = 0;
-showImage()
+showImage();
 
 function showImage(){
 
@@ -29,11 +29,11 @@ $('.dot').click(function(){
 });
 
 $('#slideshow-left-arrow').click(function(){
-  imageIndex--
+  imageIndex--;
   showImage()
 })
 
 $('#slideshow-right-arrow').click(function(){
-  imageIndex++
+  imageIndex++;
   showImage()
 })
